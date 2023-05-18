@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://www.cookierun-kingdom.com/static/keyVisualBackground-719081def4e815414aceaa9537015f67.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*Nav bar*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #2A221C;
+
+}
+
+.logo {
+    width: 8%;
+    height: 8%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+nav ul li a {
+    color: antiquewhite;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #E1BF7F;
+    transition: .4s;
+}
+
+.btn {
+    background-color: #A9333A;
+    color: #f1d296;
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.logo-fig{
+    position: relative;
+    top: 75px;
+    z-index: 1;
+    filter: drop-shadow(0 0 0.75rem #2A221C);
+}
+.logo-fig { 
+    animation-name: logo-fig;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes logo-fig {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+.logo-2{
+    display: flex;
+    justify-content: center;
+}
+.video-container-box {
+    display: flex;
+    justify-content: center;
+}
+.video-dis{
+    margin: 5px;
+}
+#video_box{
+    position:relative;
+}
+#video_overlays {
+    position:absolute;
+    width: 770px;
+    height: 475px;
+}
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;}
