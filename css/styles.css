@@ -50,6 +50,17 @@ nav {
 
 /* horizontal scroll items  */
 
+.link {
+    text-decoration: none;
+    font-size: 20px;
+    color: brown;
+    border: 1px solid brown;
+    padding: 10px 20px;
+}
+.link:hover{
+    transform: scale(1.2);
+    transition: .4s;
+}
 .container {
     margin-top: 200px;
     margin-left: 200px;
