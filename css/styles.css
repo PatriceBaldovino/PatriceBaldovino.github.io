@@ -6,9 +6,6 @@
 body {
     background: #131313;
     font-family: "Neue Montreal";
-}
-
-.home {
     overflow: hidden;
 }
 
@@ -22,29 +19,29 @@ nav {
     z-index: 2;
 }
 
-.menu__logo, .menu__items-link {
+.nav__logo, .nav__items-link {
     padding: 40px;
 }
 
-.menu__logo a {
+.nav__logo a {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.menu__items {
+.nav__items {
     display: flex;
 }
 
-.menu__items-link a {
+.nav__items-link a {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
 }
 
-.menu__items-link.active a {
+.nav__items-link.active a {
     text-decoration: underline;
 }
 
