@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kurt Davenport | Portfolio by Codegrid</title>
+    <title>Patrice Baldovino / Portfolio</title>
     <meta name="author" content="harrnish @codegrid">
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
 
     <!-- greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -19,11 +24,11 @@
         <!-- menu -->
         <nav class="nav">
             <div class="nav__logo">
-                <a href="index.html">PB</a>
+                <a href="/index.html">PB</a>
             </div>
             
             <div class="nav__items">
-                <div class="nav__items-link active"><a href="gallery.html">Gallery</a></div>
+                <div class="nav__items-link active"><a href="/Art page/gallery.html">Gallery</a></div>
                 <div class="nav__items-link"><a href="/project/project.html">Projects</a></div>
                 <div class="nav__items-link"><a href="/web dev/web.html">Web Dev</a></div>
                 <div class="nav__items-link"><a href="/about/about.html">About</a></div>
@@ -32,33 +37,33 @@
 
         <!-- Art Showcase -->
         <div class="container">
-            <div class="container__item container__item-header">
-                <h1><span style="color: brown; font-style: italic;">Patrice Baldovino</span>, <br> Graphic Design, <br> Art.</h1>
+            <div class="card__item card__item-header">
+                <h1><span style="color: brown; font-style: italic;">Patrice Baldovino</span>, <br> Portfolio</h1>
             </div>
 
-            <div class="container__item container__item-1">
-                <h1 class="container__item-title">
+            <div class="card__item card__item-1">
+                <h1 class="card__item-title">
                     <a href="gallery.html">Rina Sawayama</a>
                 </h1>
             </div>
-            <div class="container__item container__item-2">
-                <h1 class="container__item-title">
+            <div class="card__item card__item-2">
+                <h1 class="card__item-title">
                     <a href="gallery.html">b$nny</a>
                 </h1>
             </div>
-            <div class="container__item container__item-3">
-                <h1 class="container__item-title">
-                    <a href="gallery.html">Boyfriend</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-4">
-                <h1 class="container__item-title">
-                    <a href="gallery.html">Prom Queen</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-5">
-                <h1 class="container__item-title">
+            <div class="card__item card__item-3">
+                <h1 class="card__item-title">
                     <a href="/project/project.html">Projects</a>
+                </h1>
+            </div>
+            <div class="card__item card__item-4">
+                <h1 class="card__item-title">
+                    <a href="/web-dev/web.html">Web Dev</a>
+                </h1>
+            </div>
+            <div class="card__item card__item-5">
+                <h1 class="card__item-title">
+                    <a href="/about/about.html">About me.</a>
                 </h1>
             </div>
         </div>
@@ -68,7 +73,7 @@
     <!-- script -->
     <script src="js/horizontal-scroll.js"></script>
     <script>
-        var blocks = document.getElementsByClassName("container__item");
+        var blocks = document.getElementsByClassName("card__item");
         var container = document.getElementsByClassName("container");
         var hs = new HorizontalScroll.default({
             blocks: blocks,

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +7,11 @@
 
 body {
     background: #131313;
-    font-family: "Neue Montreal";
+    font-family: 'Syne', sans-serif;
     overflow: hidden;
 }
 
-/* menu */
+/* nav */
 nav {
     position: fixed !important;
     top: 0;
@@ -25,9 +27,11 @@ nav {
 
 .nav__logo a {
     color: #fff;
-    font-size: 14px;
+    font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
 }
 
 .nav__items {
@@ -63,14 +67,14 @@ nav {
     margin-left: 200px;
 }
 
-.container__item {
+.card__item {
     position: relative;
     width: 540px;
     height: 360px;
     margin: 50px 500px 20px 80px;
 }
 
-.container__item-header h1 {
+.card__item-header h1 {
     position: relative;
     top: 40px;
     left: 0;
@@ -80,59 +84,59 @@ nav {
     font-size: 100px !important;
 }
 
-.container__item h1 {
+.card__item h1 {
     position: absolute;
     left: 40px;
     bottom: -40px;
     color: #fff;
-    font-family: "GrandSlang Roman";
     font-weight: lighter;
     font-size: 64px;
 }
 
-.container__item-title a {
+.card__item-title a {
     color: #fff;
     text-decoration: none;
+    font-weight: 800;
 }
 
-.container__item-1 {
+.card__item-1 {
     background: url(../images/rina\ sawayama.png) no-repeat 50% 50%;
     background-size: cover;
 }
 
-.container__item-2 {
+.card__item-2 {
     background: url(../images/red\ n\ black\ -\ sign.png) no-repeat 50% 50%;
     background-size: cover;
 }
 
-.container__item-3 {
-    background: url(../images/Boyfriend\ -\ dove\ 1\ with\ signature.png) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-.container__item-4 {
-    background: url(../images/pink\ crazy\ idk\ -\ finalll.png) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-.container__item-5 {
+.card__item-3 {
     background: url(../project/1.png) no-repeat 50% 50%;
     background-size: cover;
 }
 
+.card__item-4 {
+    background: url(../project/9.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.card__item-5 {
+    background: url(../about/) no-repeat 50% 50%;
+    background-size: cover;
+}
+
 @media(max-width: 900px) {
-    .container__item {
+    .card__item {
         width: 300px;
         height: 200px;
         margin: 50px 100px 20px 80px;
     }
 
-    .container__item-header h1 {
+    .card__item-header h1 {
         font-size: 30px !important;
         left: -50%;
     }
 
-    .container__item h1 {
+    .card__item h1 {
         font-size: 40px;
         bottom: -20px;
     }
@@ -160,7 +164,7 @@ nav {
 }
 
 .about__container p span {
-    font-family: "GrandSlang Roman";
+    font-family: 'Syne', sans-serif;
 }
 
 .about__container-contact-link a {
@@ -213,13 +217,13 @@ p.about__container-link {
 
 .project__container-title h1{
     color: #fff;
-    font-family: "GrandSlang Roman";
+    font-family: 'Syne', sans-serif;
     font-size: 140px;
 }
 
 .project__container-subtitle {
     margin: 20px 0;
-    font-family: "Neue Montreal";
+    font-family: 'Syne', sans-serif;
     font-size: 16px;
 }
 
@@ -278,7 +282,7 @@ p.about__container-link {
 .project-next-link a {
     color: #fff;
     text-decoration: none;
-    font-family: "GrandSlang Roman";
+    font-family: 'Syne', sans-serif;
     font-size: 160px;
 }
 
