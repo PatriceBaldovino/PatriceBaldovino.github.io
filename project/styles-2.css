@@ -13,6 +13,13 @@ body {
 	font-family: 'Syne', sans-serif;
 }
 
+#myID {
+	height: 400px;
+	width: 500px;
+	background-color: red;
+  }
+
+/* nav */
 nav {
     position: fixed !important;
     top: 0;
@@ -22,39 +29,31 @@ nav {
     z-index: 2;
 }
 
-
-#myID {
-	height: 400px;
-	width: 500px;
-	background-color: red;
-  }
-
-
-
-.menu__logo, .menu__items-link {
+.nav__logo, .nav__items-link {
     padding: 40px;
 }
 
-.menu__logo a {
+.nav__logo a {
     color: #fff;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-	font-weight: 800;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
 }
 
-.menu__items {
+.nav__items {
     display: flex;
 }
 
-.menu__items-link a {
+.nav__items-link a {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
 }
 
-.menu__items-link.active a {
+.nav__items-link.active a {
     text-decoration: underline;
 }
 
