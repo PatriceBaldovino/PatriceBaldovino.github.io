@@ -148,7 +148,7 @@ body {
 
 .header .header-container h1 {
 	font-family: 'Syne', sans-serif;
-	font-size: 12rem;
+	font-size: 10rem;
 }
 
 @media (max-width: 900px) {

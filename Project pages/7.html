@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,203 +8,275 @@
     <title>Card Animation using GSAP</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://kit.fontawesome.com/a72dd3ca27.js" crossorigin="anonymous"></script>
+    <!-- Font 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: #FE3447;
-    overflow: hidden;
-    color: #242134;
-}
-.card-animation {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    font-family: "PP Neue Montreal";
-}
-.card-animation .img {
-    width: 450px;
-    height: 600px;
-    background: url(../project/7.png) center center no-repeat;
-    background-size: cover;
-}
-.card-animation .card-header {
-    font-size: 70px;
-    font-family: "Monument";
-    margin: 15px 0px;
-    color: #242134;
-}
-.card-animation .card-text-below {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card-animation .card-side {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    margin-left: 450px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #242134;
-}
-.card-side h2 {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 400;
-}
-.card-side .card-on {
-    width: 90px;
-    cursor: pointer;
-    margin: 20px 0px;
-    position: relative;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #242134;
-    color: #242134;
-    font-size: 22px;
-    border-radius: 100%;
-    background: transparent;
-}
-.card-on #card-plus {
-    position: absolute;
-}
-.card-on #card-minus {
-    position: absolute;
-    display: none;
-}
-.card-right{
-    position: absolute;
-    top: 18%;
-    left: 5%;
-    font-family: "Monument";
-    color: #242134;
-    font-size: 35px;
-    text-transform: uppercase;
-}
-.card-animation .card-side-text {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    margin-left: 320px;
-    color: #242134;
-}
-.card-side-text .card-paragraph {
-    font-size: 19px;
-}
-.next{
-    padding: 10px;
-    text-decoration: none;
-    color: #242134;
-    font-family: "Monument";
-    font-size: 20px;
-}
-</style>
-<body>
-    <div class="card-animation" id="card-animation">
-      <div class="img"></div>
-      <p class="card-header">SKATE</p>
-      <div class="card-text-below">
-        <a class="next" href="/Project pages/6.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <a class="next" href="/Project pages/8.html"><i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="card-side">
-        <h2>
-          TsuziBoy <br />
-          _2M
-        </h2>
-        <div onclick="cardOn()" class="card-on">
-          <span id="card-plus">+</span>
-          <span id="card-minus">-</span>
-        </div>
-      </div>
-      <div class="card-right">
-        <h1 class="title">
-            Anime<br>
-            Poster
-        </h1>
-      </div>
-      <div class="card-side-text">
-        <p class="card-paragraph">
-          This is a poster for a future <br />
-          anime. Because the character has a lot <br />
-          of colorful colors in their design, <br />
-          I opted to utilize vibrant yet dark hues <br />
-          for the colors. 
-        </p>
-      </div>
-    </div>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #FE3447;
+        overflow: hidden;
+        color: #242134;
+        font-family: 'Syne', sans-serif;
+    }
+
+    /* nav */
+    nav {
+        position: fixed !important;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+    }
+
+    .nav__logo,
+    .nav__items-link {
+        padding: 40px;
+    }
+
+    .nav__logo a {
+        color: #242134;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+    }
+
+    .nav__items {
+        display: flex;
+    }
+
+    .nav__items-link a {
+        color: #242134;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .nav__items-link.active a {
+        text-decoration: underline;
+    }
     
+    .card-animation {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-animation .img {
+        width: 450px;
+        height: 600px;
+        background: url(../project/7.png) center center no-repeat;
+        background-size: cover;
+    }
+
+    .card-animation .card-header {
+        font-size: 60px;
+        margin: 15px 0px;
+        color: #242134;
+        font-weight: 800;
+    }
+
+    .card-animation .card-text-below {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-animation .card-side {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin-left: 450px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #242134;
+    }
+
+    .card-side h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .card-side .card-on {
+        width: 90px;
+        cursor: pointer;
+        margin: 20px 0px;
+        position: relative;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #242134;
+        color: #242134;
+        font-size: 22px;
+        border-radius: 100%;
+        background: transparent;
+    }
+
+    .card-on #card-plus {
+        position: absolute;
+    }
+
+    .card-on #card-minus {
+        position: absolute;
+        display: none;
+    }
+
+    .card-right {
+        position: absolute;
+        top: 18%;
+        left: 5%;
+        color: #242134;
+        font-size: 29px;
+        text-transform: uppercase;
+    }
+
+    .card-animation .card-side-text {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-left: 320px;
+        color: #242134;
+    }
+
+    .card-side-text .card-paragraph {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .next {
+        padding: 10px;
+        text-decoration: none;
+        color: #242134;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <!-- menu -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="/index.html">PB</a>
+        </div>
+
+        <div class="nav__items">
+            <div class="nav__items-link active"><a href="/Art page/gallery.html">Gallery</a></div>
+            <div class="nav__items-link"><a href="/project/project.html">Projects</a></div>
+            <div class="nav__items-link"><a href="/web dev/web.html">Web Dev</a></div>
+            <div class="nav__items-link"><a href="/about/about.html">About</a></div>
+        </div>
+    </nav>
+
+    <div class="card-animation" id="card-animation">
+        <div class="img"></div>
+        <p class="card-header">SKATE</p>
+        <div class="card-text-below">
+            <a class="next" href="/Project pages/6.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a class="next" href="/Project pages/8.html"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="card-side">
+            <h2>
+                TsuziBoy <br />
+                _2M
+            </h2>
+            <div onclick="cardOn()" class="card-on">
+                <span id="card-plus">+</span>
+                <span id="card-minus">-</span>
+            </div>
+        </div>
+        <div class="card-right">
+            <h1 class="title">
+                Anime<br>
+                Poster
+            </h1>
+        </div>
+        <div class="card-side-text">
+            <p class="card-paragraph">
+                This is a poster for a future <br />
+                anime. Because the character has a lot <br />
+                of colorful colors in their design, <br />
+                I opted to utilize vibrant yet dark hues <br />
+                for the colors.
+            </p>
+        </div>
+    </div>
+
     <!--Script-->
     <script>
-    /** @format */
-    const tl = gsap.timeline();
+        /** @format */
+        const tl = gsap.timeline();
         tl.from(".img", {
-        delay: 0.5,
-        y: -100,
-        height: 0,
-        duration: 1,
-        ease: "Power2.easeInOut",
-    });
-    tl.from(
-    ".card-side, .card-header",
-    {
-        y: -50,
-        opacity: 0,
-        stagger: {
-        amount: 0.3,
-        },
-    },
-    "-=.3"
-    );
+            delay: 0.5,
+            y: -100,
+            height: 0,
+            duration: 1,
+            ease: "Power2.easeInOut",
+        });
+        tl.from(
+            ".card-side, .card-header",
+            {
+                y: -50,
+                opacity: 0,
+                stagger: {
+                    amount: 0.3,
+                },
+            },
+            "-=.3"
+        );
 
-    const card = gsap.timeline({
-        paused: "true",
-        reversed: "true",
-    });
-    card.fromTo("#card-animation #card-plus",{
-        display: "block",
-    },
-    {
-        display: "none",
-    }
-    );
-    card.fromTo(
-    "#card-animation #card-minus",
-    {
-        display: "none",
-    },
-    {
-        display: "block",
-    }
-    );
-    card.fromTo("#card-animation .card-paragraph, #card-animation .card-text-below, #card-animation .card-right",{
-        opacity: 0,
-        y: 20,
-    },
-    {
-        opacity: 1,
-        y: 0,
-        stagger: {
-        amount: 0.4,
+        const card = gsap.timeline({
+            paused: "true",
+            reversed: "true",
+        });
+        card.fromTo("#card-animation #card-plus", {
+            display: "block",
         },
-    },
-    "-=2"
-    );
+            {
+                display: "none",
+            }
+        );
+        card.fromTo(
+            "#card-animation #card-minus",
+            {
+                display: "none",
+            },
+            {
+                display: "block",
+            }
+        );
+        card.fromTo("#card-animation .card-paragraph, #card-animation .card-text-below, #card-animation .card-right", {
+            opacity: 0,
+            y: 20,
+        },
+            {
+                opacity: 1,
+                y: 0,
+                stagger: {
+                    amount: 0.4,
+                },
+            },
+            "-=2"
+        );
 
-    function cardOn() {
-        card.reversed() ? card.play() : card.reverse();
-    }
+        function cardOn() {
+            card.reversed() ? card.play() : card.reverse();
+        }
     </script>
 </body>
+
 </html>

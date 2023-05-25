@@ -2,7 +2,7 @@
 /****************************************************/
 :root {
 	--pr-color: #fff;
-	--second-color: #0a0a0a;
+	--second-color: #131313;
 	--cubicbz: cubic-bezier(.9, 0, .1, 1);
 	--fz-big: 60px;
 }
@@ -21,42 +21,43 @@ body {
 
 /* nav */
 nav {
-  position: fixed !important;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content:space-between;
-  z-index: 2;
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
 }
 
-.nav__logo, .nav__items-link {
-  padding: 40px;
+.nav__logo,
+.nav__items-link {
+	padding: 40px;
 }
 
 .nav__logo a {
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
+	color: #fff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .nav__items {
-  display: flex;
+	display: flex;
 }
 
 .nav__items-link a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
 }
 
 .nav__items-link.active a {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /******************************************/
-.wrapp {
+.wrap {
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -73,8 +74,8 @@ nav {
 	color: var(--pr-color);
 }
 
-/* Image Gallery **********************************/
-.gallery {
+/* Image Gallery */
+.card {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -82,7 +83,7 @@ nav {
 	gap: 60px;
 }
 
-.gallery__item {
+.card__item {
 	position: relative;
 	max-width: calc(33.33% - 40px);
 	width: 100%;
@@ -92,7 +93,7 @@ nav {
 	cursor: pointer;
 }
 
-.gallery__img {
+.card__img {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -101,11 +102,11 @@ nav {
 	transition: .8s var(--cubicbz);
 }
 
-.gallery__item:hover .gallery__img {
+.card__item:hover .card__img {
 	transform: scale(1.3);
 }
 
-.gallery__item::after {
+.card__item::after {
 	position: absolute;
 	content: '';
 	width: 100%;
@@ -121,7 +122,7 @@ nav {
 	transition: .8s var(--cubicbz);
 }
 
-.gallery__item:hover::after {
+.card__item:hover::after {
 	opacity: 1;
 }
 
@@ -142,7 +143,7 @@ nav {
 	transition: .8s var(--cubicbz);
 }
 
-.gallery__item:hover .zoom {
+.card__item:hover .zoom {
 	opacity: 1;
 	transform: translate(-50%, -50%);
 }

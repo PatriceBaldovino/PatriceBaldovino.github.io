@@ -1,12 +1,15 @@
-const appear = document.querySelector('.container'); 
-const cb = function(entries){
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('inview');
-    }else{
-      entry.target.classList.remove('inview');
+let elementsArray = document.querySelectorAll(".wrap");
+console.log(elementsArray);
+window.addEventListener('scroll', fadeIn ); 
+function fadeIn() {
+    for (var i = 0; i < elementsArray.length; i++) {
+        var elem = elementsArray[i]
+        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+        if (distInView < 0) {
+            elem.classList.add("inView");
+        } else {
+            elem.classList.remove("inView");
+        }
     }
-  });
 }
-const io = new IntersectionObserver(cb);
-io.observe(appear);
+fadeIn();
