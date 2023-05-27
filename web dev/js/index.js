@@ -1,5 +1,5 @@
-const grid = document.querySelector('.grid');
-const gridItems = [...document.querySelectorAll('.grid-item')];
+const grid = document.querySelector('.container');
+const gridItems = [...document.querySelectorAll('.container-item')];
 const gridRows = [...document.querySelectorAll('.row')];
 const images = [...document.querySelectorAll('.img')];
 const heading = document.querySelector('.heading');
