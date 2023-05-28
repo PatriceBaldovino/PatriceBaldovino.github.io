@@ -16,7 +16,10 @@
 }
 
 body {
-	background: var(--second-color);
+	background: rgb(19, 19, 19);
+	background: linear-gradient(0deg, 
+	rgba(19, 19, 19, 1) 44%, 
+	rgb(33, 33, 33) 100%);
 }
 
 /* nav */
@@ -35,7 +38,7 @@ nav {
 }
 
 .nav__logo a {
-	color: #fff;
+	color: #babac3;
 	font-size: 24px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -46,7 +49,7 @@ nav {
 }
 
 .nav__items-link a {
-	color: #fff;
+	color: #babac3;
 	font-size: 14px;
 	font-weight: 400;
 	text-decoration: none;
@@ -71,7 +74,7 @@ nav {
 	margin-bottom: 110px;
 	font-size: var(--fz-big);
 	text-transform: uppercase;
-	color: var(--pr-color);
+	color: #babac3;
 }
 
 /* Image Gallery */

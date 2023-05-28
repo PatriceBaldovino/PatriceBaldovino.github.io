@@ -2,86 +2,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patrice Baldovino / Portfolio</title>
-    <meta name="author" content="harrnish @codegrid">
-
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
-
-    <!-- greensock -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Patrice Baldovino - Portfolio</title>
+	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <div class="main-page">
-        <!-- menu -->
-        <nav class="nav">
-            <div class="nav__logo">
-                <a href="/index.html">PB</a>
-            </div>
-            
-            <div class="nav__items">
-                <div class="nav__items-link active"><a href="/Art page/gallery.html">Gallery</a></div>
-                <div class="nav__items-link"><a href="/project/project.html">Projects</a></div>
-                <div class="nav__items-link"><a href="/web dev/web.html">Web Dev</a></div>
-                <div class="nav__items-link"><a href="/about/about.html">About</a></div>
-            </div>
-        </nav>
+	<!-- menu -->
+	<nav class="nav">
+		<div class="nav__logo">
+			<a href="/index.html">PB</a>
+		</div>
 
-        <!-- Art Showcase -->
-        <div class="container">
-            <div class="card__item card__item-header">
-                <h1><span style="color: brown; font-style: italic;">Patrice Baldovino</span>, <br><b>Portfolio</b></h1>
-            </div>
+		<div class="nav__items">
+			<div class="nav__items-link"><a href="/Art page/gallery.html">Gallery</a></div>
+			<div class="nav__items-link"><a href="/project/project.html">Projects</a></div>
+			<div class="nav__items-link"><a href="/web dev/web.html">Web Dev</a></div>
+			<div class="nav__items-link"><a href="/about/about.html">About</a></div>
+		</div>
+	</nav>
 
-            <div class="card__item card__item-1">
-                <h1 class="card__item-title">
-                    <a href="/Art page/gallery.html">Rina Sawayama</a>
-                </h1>
-            </div>
-            <div class="card__item card__item-2">
-                <h1 class="card__item-title">
-                    <a href="/Art page/gallery.html">b$nny</a>
-                </h1>
-            </div>
-            <div class="card__item card__item-3">
-                <h1 class="card__item-title">
-                    <a href="/project/project.html">Projects</a>
-                </h1>
-            </div>
-            <div class="card__item card__item-4">
-                <h1 class="card__item-title">
-                    <a href="/web dev/web.html">Web Dev</a>
-                </h1>
-            </div>
-            <div class="card__item card__item-5">
-                <h1 class="card__item-title">
-                    <a href="/about/about.html">About me.</a>
-                </h1>
-            </div>
-        </div>
+	<!-- div .wrapp -->
+	<div id="luxy" class="wrapp">
 
-    </div>
+		<!-- div .header -->
+		<header class="header">
+			<h1 class="title" data-splitting><span class="title_paralax">Design</span><span class="stroke">
+					Portfolio</span></h1>
+			<div class="header__img">
+				<img src="img/1.png" alt="1">
+			</div>
+			<div class="header__marq">
+				<div class="header__marq-wrapp">
+					<span class="header__marq-txt">graphic design
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">web development
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">digital art
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">branding
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+				</div>
+			</div>
+		</header>
 
-    <!-- script -->
-    <script src="js/horizontal-scroll.js"></script>
-    <script>
-        var blocks = document.getElementsByClassName("card__item");
-        var container = document.getElementsByClassName("container");
-        var hs = new HorizontalScroll.default({
-            blocks: blocks,
-            container: container,
-            isAnimated: true,
-            springEffect: 0.8,
-        });
-        
-    </script>
+		<main class="main">
+
+			<!-- div .about -->
+			<section class="about">
+				<div class="about__wrapp">
+					<div class="about__img">
+						<img src="img/2.png" alt="2">
+					</div>
+					<div class="about__txt">
+						<h2 class="section-title">abo<span class="stroke">ut me</span>
+							<span class="section-title__square"></span>
+						</h2>
+						<p class="about__p">I'm Patrice Baldovino, and I'm a first-year Creative Computing
+							student with a passion for design, developing creative ideas,
+							and building visual identities.<br><br>
+							<i>
+								“Imagination is the beginning of creation. You imagine what
+							you desire, you will what you imagine, and at last, you create
+							what you will.” </i>– George Bernard Shaw
+							
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- div .serv -->
+			<section class="serv">
+				<div class="content">
+					<h2 class="section-title">View P<span class="stroke">roject</span>
+						<span class="section-title__square"></span>
+					</h2>
+
+					<div class="serv__list">
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="500">
+								<a href="/Art page/gallery.html"><img src="img/arrow.svg" alt=""></a>
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Digital Art</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="400">
+								<a href="/project/project.html"><img src="img/arrow.svg" alt=""></a>
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Graphic Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="800">
+								<a href="/web dev/web.html"><img src="img/arrow.svg" alt=""></a>
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Web Development</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="600">
+								<a href="/about/about.html"><img src="img/arrow.svg" alt=""></a>
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/About Me</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- div .work -->
+			<section class="work">
+				<div class="content">
+					<h2 class="section-title">pro<span class="stroke">jects</span>
+						<span class="section-title__square"></span>
+					</h2>
+				</div>
+
+				<div class="work__wrapp">
+					<div class="work__item" data-speed="-300">
+						<a href="/Art page/gallery.html"><span class="work__item-num" data-speed="-1000">/001</span></a>
+						<div class="work__item-img">
+							<img src="img/3.png" alt="3">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-600">
+						<a href="/project/project.html"><span class="work__item-num" data-speed="-500">/002</span></a>
+						<div class="work__item-img">
+							<img src="img/4.png" alt="4">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-700">
+						<a href="/Project pages/1.html"><span class="work__item-num" data-speed="-700">/003</span></a>
+						<div class="work__item-img">
+							<img src="img/5.png" alt="5">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-400">
+						<a href="/web dev/web.html"><span class="work__item-num" data-speed="-200">/004</span></a>
+						<div class="work__item-img">
+							<img src="img/6.png" alt="6">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- div .footer -->
+		<footer class="footer">
+			<div class="footer__div">
+				<span data-speed="-300">p</span>
+				<span data-speed="100">o</span>
+				<span data-speed="300">r</span>
+				<span data-speed="-300">t</span>
+				<span data-speed="350">f</span>
+				<span data-speed="200">o</span>
+				<span data-speed="-310">l</span>
+				<span data-speed="200">i</span>
+				<span data-speed="-340">o</span>
+			</div>
+		</footer>
+	</div>
+	<!-- /div .wrapp END -->
+	<script src="js/splitting.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="js/luxy.js"></script>
+	<script src="js/js.js"></script>
 </body>
+
 </html>

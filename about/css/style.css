@@ -4,13 +4,16 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	font-family: 'Syne', sans-serif;
-	color: #fff;
+	color: #babac3;
 }
 
 html,
 body {
 	overflow-x: hidden;
-	background: #131313;
+	background: rgb(19, 19, 19);
+	background: linear-gradient(0deg, 
+	rgba(19, 19, 19, 1) 44%, 
+	rgb(33, 33, 33) 100%);
 }
 
 /* animation */
@@ -49,7 +52,7 @@ body {
 .divider {
 	width: 100%;
 	height: 2px;
-	background: #fff;
+	background: #babac3;
 }
 
 .whitespace {
@@ -72,7 +75,7 @@ body {
 }
 
 .nav__logo a {
-    color: #fff;
+    color: #babac3;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
@@ -85,7 +88,7 @@ body {
 }
 
 .nav__items-link a {
-    color: #fff;
+    color: #babac3;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
@@ -222,7 +225,7 @@ body {
 }
 
 .middle-space {
-	border-left: 2px solid #fff;
+	border-left: 2px solid #babac3;
 	margin-left: 190px;
 	margin-right: 190px;
 }
@@ -308,7 +311,7 @@ body {
 	position: absolute;
 	padding: 1px 8px;
 	background-color: #000;
-	color: #fff;
+	color: #babac3;
 	font-size: 15px;
 	border-radius: 3px;
 	top: -28px;
@@ -486,7 +489,7 @@ body {
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
-	color: #fff;
+	color: #babac3;
 	-webkit-transition: opacity 0.4s;
 	transition: opacity 0.4s;
 	font-family: 'Syne', sans-serif;
@@ -542,7 +545,7 @@ body {
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	color: #fff;
+	color: #babac3;
 	pointer-events: none;
 	mix-blend-mode: difference;
 }

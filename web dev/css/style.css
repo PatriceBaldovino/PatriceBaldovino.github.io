@@ -1,12 +1,7 @@
 :root {
   --bg-color: #131313;
-  --text-color: #ffffff;
+  --text-color: #babac3;
 }
-
-/* :root {
-    --bg-color: #ffffff;
-    --text-color: #131313;
-  } */
 
 html,
 body {
@@ -37,7 +32,7 @@ nav {
 }
 
 .nav__logo a {
-  color: #fff;
+  color: #babac3;
   font-size: 24px;
   text-transform: uppercase;
   text-decoration: none;
@@ -50,7 +45,7 @@ nav {
 }
 
 .nav__items-link a {
-  color: #fff;
+  color: #babac3;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
@@ -134,8 +129,8 @@ span {
 .container-item {
   position: relative;
   height: 100%;
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
+  border-top: 1px solid #babac3;
+  border-right: 1px solid #babac3;
   cursor: pointer;
   transition: 0.3s;
   flex: 1;
