@@ -1,3 +1,4 @@
+/* Fade-in Animation */
 let elementsArray = document.querySelectorAll(".wrap");
 console.log(elementsArray);
 window.addEventListener('scroll', fadeIn ); 

@@ -1,3 +1,4 @@
+/* Fade-in Animation */
 const appear = document.querySelector('.wrapper'); 
 const cb = function(entries){
   entries.forEach(entry => {

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	gTl.to(".header__img", 2, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", scale: 1, ease: "expo.out" }, "-=1");
 	gTl.from(".header__marq", 2, { opacity: 0, yPercent: 100, ease: "expo.out" }, "-=1.5");
 
+	//square scroll animation 
 	const gsapSq = gsap.utils.toArray('.section-title__square');
 	gsapSq.forEach((gSq, i) => {
 		const rotat = gsap.from(gSq, 3, { rotation: 720 });
@@ -108,21 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	about();
 
-
-	//benefits
-	function benefits() {
-		gsap.from('.benefits__num', {
-			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-			scrollTrigger: {
-				trigger: '.benefits__list',
-				start: 'top bottom',
-				scrub: 1.9
-			}
-		})
-	}
-	benefits();
-
-
+	
 	//portfolio
 	function portfolio() {
 		gsap.from('.work__item, .work__item-num', {
@@ -145,18 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	portfolio();
 
 
-	//serv
-	function serv() {
-		gsap.from('.serv__item-arrow', {
+	//project
+	function proj() {
+		gsap.from('.proj__item-arrow', {
 			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
 			scrollTrigger: {
-				trigger: '.serv__list',
+				trigger: '.proj__list',
 				start: 'top bottom',
 				scrub: 1.9
 			}
 		})
 	}
-	serv();
+	proj();
 
 
 	//footer

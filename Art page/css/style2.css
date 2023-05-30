@@ -1,4 +1,3 @@
-
 html {
     line-height: 1.15;
     /* 1 */
@@ -223,11 +222,13 @@ template {
     transition: .4s;
     opacity: 0;
 }
+
 .bottom-right.inView {
     opacity: 1;
     -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
     transform: translateY(0px) rotate(0deg) translateZ(0);
 }
+
 .inView {
     opacity: 1;
     -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
